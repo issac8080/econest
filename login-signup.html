@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Signup</title>
+    <style>
+        /* Reset some default styles for better consistency */
+        body, h2, form {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Apply styles to the container */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('forest-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Style the form containers */
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+
+        /* Style form headings */
+        h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Style form labels */
+        label {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 6px;
+            color: #333;
+        }
+
+        /* Style form input fields */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Style form buttons */
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #388E3C; /* Slightly darker green on hover */
+        }
+
+        /* Add media queries for responsive design if needed */
+        @media (max-width: 768px) {
+            .form-container {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .form-container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="login-email">Email</label>
+                <input type="email" id="login-email" name="login-email" required>
+
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" name="login-password" required>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <div class="form-container">
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <label for="signup-name">Name</label>
+                <input type="text" id="signup-name" name="signup-name" required>
+
+                <label for="signup-email">Email</label>
+                <input type="email" id="signup-email" name="signup-email" required>
+
+                <label for="signup-password">Password</label>
+                <input type="password" id="signup-password" name="signup-password" required>
+
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Pickup</title>
+    <style>
+        /* Reset some default styles for better consistency */
+        body, h2, form {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Apply styles to the container */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('forest-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Style the form container */
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            width: 80%;
+        }
+
+        /* Style form headings */
+        h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Style form labels */
+        label {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 6px;
+            color: #333;
+        }
+
+        /* Style form input fields */
+        input[type="text"],
+        input[type="date"],
+        input[type="time"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Style form buttons */
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #388E3C; /* Slightly darker green on hover */
+        }
+
+        /* Add media queries for responsive design if needed */
+        @media (max-width: 768px) {
+            .form-container {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .form-container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Schedule Pickup</h2>
+            <form id="pickup-form">
+                <label for="pickup-date">Date</label>
+                <input type="date" id="pickup-date" name="pickup-date" required>
+
+                <label for="pickup-time">Time</label>
+                <input type="time" id="pickup-time" name="pickup-time" required>
+
+                <label for="pickup-location">Pickup Location</label>
+                <input type="text" id="pickup-location" name="pickup-location" required>
+
+                <label for="pickup-items">Items to Pickup</label>
+                <input type="text" id="pickup-items" name="pickup-items" required>
+
+                <button type="submit">Schedule Pickup</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
